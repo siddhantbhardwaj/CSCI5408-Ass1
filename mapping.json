@@ -1,0 +1,32 @@
+{
+  "mappings": {
+    "_doc": {
+      "properties": {
+        "trip_join": { 
+          "type": "join",
+          "relations": {
+            "trip": "stoptime"
+          }
+        },
+        "block_id": { "type": "keyword" },
+        "route_id": { "type": "keyword" },
+        "trip_headsign": { "type": "keyword" },
+        "service_id": { "type": "keyword" },
+        "shape_id": { "type": "keyword" },
+        "trip_id": { "type": "keyword" },
+        "stop": {
+	        "type": "nested",
+          "properties": {
+            "name_stop": { "type": "keyword" },
+            "stop_id": { "type": "integer" },
+            "lat": { "type": "double" },
+            "lon": { "type": "double" }
+          }
+        },
+        "arrival_time": { "type": "date", "format": "HH:mm:ss" },
+        "departure_time": { "type": "date", "format": "HH:mm:ss" },
+        "stop_sequence":{ "type":"integer" }
+      }
+    }    
+  }
+}
