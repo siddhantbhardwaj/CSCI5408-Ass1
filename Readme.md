@@ -6,7 +6,7 @@
   - Setup ElasticSearch on EC2 instance
 
 #### Steps to Upload data
-* **[Step#1]** : Once the elasticsearch is up and running on AWS EC2 instance, we have to setup index name. We can do that by sending a PUT request using `curl`, or by using a REST client such as *Insomnia*. We also need to provide mapping of the fields defining data-types and relationship between entities.
+**[Step#1]** : Once the elasticsearch is up and running on AWS EC2 instance, we have to setup index name. We can do that by sending a PUT request using `curl`, or by using a REST client such as *Insomnia*. We also need to provide mapping of the fields defining data-types and relationship between entities.
 
 ```sh
 curl -XPUT 'http://ec2instance:9200/busdb' -H 'Content-Type: application/json' -d '
